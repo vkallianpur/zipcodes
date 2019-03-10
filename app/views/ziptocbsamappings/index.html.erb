@@ -1,0 +1,4 @@
+<%= form_tag({action: :upload}, multipart: true) do %>
+  <%= file_field_tag :file, required: true %>
+  <%= submit_tag 'Update Zip to CBSA mappings' %>
+<% end %>

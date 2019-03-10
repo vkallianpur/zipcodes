@@ -1,0 +1,32 @@
+Restful API and a client
+
+What i want to do is
+--API--
+-Host the API using ngrok or AWS or Azure so users can invoke the API themselves
+-Document the APIs using Swagger or similar
+-Provide a POSTMAN script to load/test the APIs
+-Unit test the APIs
+-Make the APIs secure using OAuth..no need to actually implement the OAuth server
+
+--Client--
+-Host the client using ngrok or AWS or Azure so users can test the functionality themselves..maybe Swagger UI is sufficient or show full stack skills
+-Client doesnt have to be UI based
+-Make the client secure so users need to login or provide a token
+
+--General--
+-Use best practices, conventions, documentation
+-Exception handling
+-input Validation
+-use github
+
+--Technologies--
+API - NodeJS or ASP.NET ...NodeJs I can demonstrate new language skills and its an interpreted language
+Client - Angular or ASP.NET MVC...can demonstrate MVC, Razor, JS 
+
+--Questions--
+In a real world with limited resources you need to prioritize so what are you looking for in this exercise
+Does the Ruby application need to be UI based 
+All code that you produced uploaded to this repo => Which repo? its not specified
+The first file below will allow you to map a zip code to a CBSA  => looks like a zip code can map to multiple CBSAs. should it pick one (which?) or process each one and return collective results?
+If the CBSA is 99999, the zip code is not part of a CBSA => I assume that mean no further processing is necessary
+You should assume that the data import will need to happen again sometime in the future as the population numbers get updated. => will only the population numbers be updated? no additional columns for subsequent years data?

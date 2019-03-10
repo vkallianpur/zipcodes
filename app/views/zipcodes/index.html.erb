@@ -1,0 +1,44 @@
+<%= form_tag(root_path, :method => "get") do %>
+  <%= label_tag(:zip_code, "Zip Code:") %>
+  <%= text_field_tag(:zip_code) %>
+  <%= submit_tag("Search") %>
+<% end %>
+	
+<% if @zipcode_details != nil %>
+	<table class="table table-sm table-borderless">
+	  <tbody>
+		<tr>
+		  <th scope="row">Zip Code : </th>
+		  <td><%= @zipcode_details.zipCode %></td>
+		</tr>
+		<tr>
+		  <th scope="row">CBSA Code : </th>
+		  <td><%= @zipcode_details.cbsaCode %></td>
+		</tr>
+		<tr>
+		  <th scope="row">MSA Name : </th>
+		  <td><%= @zipcode_details.msaName %></td>
+		</tr>
+		<tr>
+		  <th scope="row">LSAD : </th>
+		  <td><%= @zipcode_details.lsad %></td>
+		</tr>
+		<tr>
+		  <th scope="row" colspan="2">Population Estimates</th>
+		</tr>
+		<tr>
+		  <td colspan="2">
+		  <table class="table table-sm">
+		  <% @zipcode_details.populationEstimates.each do |populationEstimate| %>
+			  <tr>
+				<td>Estimated population for the year <%= populationEstimate.year%> is <%= number_with_delimiter(populationEstimate.populationEstimate, :delimiter => ',') %>.</td>
+			  </tr>
+		  <% end %>
+		  </table>			  
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
+<% elsif @error_message != nil %>
+	<p class="text-danger"><%= @error_message %><p>
+<% end %>
