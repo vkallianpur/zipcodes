@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Zipcode Management web application provides a simple UI that allows you to query zip code details from publicly available HUD data.
+The HUD data itself is accessible through the Zipcode Management REST API which exposes APIs to import the HUD data files as well as an API to get the zip code details.
 
-Things you may want to cover:
+Versions:
+The web application is built using Ruby version 2.3, Rails version 5.1.6.1.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Dependencies:
+The web application does not use any database.
+It mainly depends on Zipcode Management REST API (source code: https://github.com/vkallianpur/zipcodes-api.git) to be up and running
+At this time, the APIs/urls are hardcoded in the controllers. 
+At this time, there is no built-in authentication. 
